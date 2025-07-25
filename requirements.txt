@@ -19,4 +19,4 @@ joblib==1.2.0
 
 streamlit
 
-scikit-learn
+scikit-learn==1.2.2
