@@ -34,14 +34,3 @@ print(f"scikit-learn version used: {sklearn.__version__}")
 
 # save the model to disk
 joblib.dump(clf, "rf_model.sav")
-
-with open("rf_model.sav", "rb") as f:
-    content = f.read()
-
-# Try to find the version string in the binary
-import re
-matches = re.findall(b'scikit-learn.*?([0-9]+\.[0-9]+\.[0-9]+)', content)
-if matches:
-    print("Possible scikit-learn version(s) used:", set(m.decode() for m in matches))
-else:
-    print("No version string found.")
